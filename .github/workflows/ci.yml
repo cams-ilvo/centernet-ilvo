@@ -1,0 +1,82 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: Build distribution cams-ilvo-utils
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Install pypa/build
+      run: >-
+        python3 -m
+        pip install
+        build
+        --user
+    - name: Build a binary wheel and a source tarball
+      run: python3 -m build
+    - name: Store the distribution packages
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+
+  stage-testpypi:
+    name: >-
+      Publish cams-ilvo-utils to TestPyPI
+#    if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
+    needs:
+    - build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: staging
+      url: https://test.pypi.org/p/cams-ilvo-utils
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Publish distribution to TestPyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        repository-url: https://test.pypi.org/legacy/
+
+
+#  deploy-pypi:
+#    name: >-
+#      Publish cams-ilvo-utils to PyPI
+##    if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
+#    needs:
+#    - build
+#    runs-on: ubuntu-latest
+#
+#    environment:
+#      name: production
+#      url: https://pypi.org/p/cams-ilvo-utils
+#    permissions:
+#      id-token: write  # IMPORTANT: mandatory for trusted publishing
+#
+#    steps:
+#    - name: Download all the dists
+#      uses: actions/download-artifact@v3
+#      with:
+#        name: python-package-distributions
+#        path: dist/
+#    - name: Publish distribution to PyPI
+#      uses: pypa/gh-action-pypi-publish@release/v1
