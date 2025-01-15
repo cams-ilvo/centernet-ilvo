@@ -15,7 +15,7 @@ An example for usage is provided on the [Hugging Face - CenterNet ILVO](https://
 
 ```bash
 pip install centernet-ilvo
-```
+``` 
 
 ## Licence
 
