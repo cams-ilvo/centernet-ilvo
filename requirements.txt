@@ -1,7 +1,7 @@
-torch>=2.5.0
-torchvision>=0.15.2
-opencv_python>=4.10.0.84
-numpy>=2.2.1
-scikit-image>=0.23.2
-toml>=0.10.2
-requests>=2.32.0
+torch
+torchvision
+opencv_python
+numpy
+scikit-image
+toml
+requests
