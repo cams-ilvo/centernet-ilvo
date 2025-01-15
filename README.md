@@ -13,8 +13,10 @@ Precision Agriculture. Springer.
 
 An example for usage is provided on the [Hugging Face - CenterNet ILVO](https://huggingface.co/axelwillekens/centernet_ilvo)
 
-## Usage
+## Installation
 
+* Install [pytorch (torch and torchvision)](https://pytorch.org/get-started/locally/)
+* Install package
 ```bash
 pip install centernet-ilvo
 ``` 
