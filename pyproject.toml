@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "centernet_ilvo"
-version = "0.0.1"
+version = "0.0.11"
 authors = [
     { name="Axel Willekens", email="axel.willekens@ilvo.vlaanderen.be" }
 ]
-description = "The ilvo DL models package"
+description = "The ilvo plant centre model package"
 requires-python = ">=3.6"
 classifiers = [
    "Programming Language :: Python :: 3",

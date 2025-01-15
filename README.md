@@ -1,8 +1,10 @@
 # CenterNet ILVO
+
 ## Introduction
 
 This python package can be used to run the CenterNet model for plant centre detection.
 The plant CenterNet model is presented in the following paper:
+
 ```
 Willekens, A., Callens, B., Pieters, J., Wyffels, F., & Cool, S. (2025). 
 Cauliflower centre detection and 3-dimensional tracking for robotic intrarow weeding. 
