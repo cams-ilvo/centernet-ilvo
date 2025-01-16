@@ -15,9 +15,11 @@ An example for usage is provided on the [Hugging Face - CenterNet ILVO](https://
 
 ## Installation
 
-* Install [pytorch (torch and torchvision)](https://pytorch.org/get-started/locally/)
-* Install package
+1. Install [pytorch (torch and torchvision)](https://pytorch.org/get-started/locally/)
+2. Install dependencies and the package
 ```bash
+pip install numpy opencv-python scikit-image
+pip install cams-ilvo-utils
 pip install centernet-ilvo
 ``` 
 
