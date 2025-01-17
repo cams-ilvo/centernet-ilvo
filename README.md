@@ -11,7 +11,7 @@ Cauliflower centre detection and 3-dimensional tracking for robotic intrarow wee
 Precision Agriculture. Springer.
  ```
 
-The regression output was removed from the CenterNet architecture only to output a heatmap prediction (Vierbergen et al. 2023, Duan et al. 2019).
+The regression output was removed from the CenterNet architecture only to output a heatmap prediction (Vierbergen et al., 2023; Duan et al., 2019).
 This architecture is shown in the image below.
 
 ![CenterNet architecture](./centernet_architecture.svg "CenterNet architecture")
