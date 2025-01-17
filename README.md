@@ -3,7 +3,7 @@
 ## Introduction
 
 This python package can be used to run the CenterNet model for plant centre detection.
-The plant CenterNet model is presented in the following paper:
+The plant CenterNet model is used for autonomous intrarow weeding as described in the paper of Willekens et al., 2025.
 
 ```
 Willekens, A., Callens, B., Pieters, J., Wyffels, F., & Cool, S. (2025). 
@@ -11,7 +11,12 @@ Cauliflower centre detection and 3-dimensional tracking for robotic intrarow wee
 Precision Agriculture. Springer.
  ```
 
-An example for usage is provided on the [Hugging Face - CenterNet ILVO](https://huggingface.co/axelwillekens/centernet_ilvo)
+The regression output was removed from the CenterNet architecture only to output a heatmap prediction (Vierbergen et al. 2023, Duan et al. 2019).
+This architecture is shown in the image below.
+
+![CenterNet architecture](./centernet_architecture.png "CenterNet architecture")
+
+An example for using this model is provided in [Hugging Face - CenterNet ILVO](https://huggingface.co/axelwillekens/centernet_ilvo).
 
 ## Installation
 
