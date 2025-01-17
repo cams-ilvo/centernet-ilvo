@@ -14,7 +14,7 @@ Precision Agriculture. Springer.
 The regression output was removed from the CenterNet architecture only to output a heatmap prediction (Vierbergen et al. 2023, Duan et al. 2019).
 This architecture is shown in the image below.
 
-![CenterNet architecture](./centernet_architecture.png "CenterNet architecture")
+![CenterNet architecture](./centernet_architecture.svg "CenterNet architecture")
 
 An example for using this model is provided in [Hugging Face - CenterNet ILVO](https://huggingface.co/axelwillekens/centernet_ilvo).
 
